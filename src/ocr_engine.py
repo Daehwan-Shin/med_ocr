@@ -4,7 +4,7 @@ from .preprocess import preprocess_both
 
 class OCREngine:
     def __init__(self):
-        self.ocr = PaddleOCR(lang="korean", det=True, rec=True, use_angle_cls=True, show_log=False)
+        self.ocr = PaddleOCR(lang="korean")
 
     def ocr_lines(self, bgr):
         variants = preprocess_both(bgr)
